@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      padding: 2rem;
+      background: #191717;
+      font-family: sans-serif;
+      display: block;
+    }
+    p{
+      width: 20rem;
+      word-wrap: break-word;
+      margin: 5rem auto;
+      width: 30rem;
+      background: #29248b;
+      border-radius: 2rem;
+      min-height: 50vh;
+      font-size: 3rem;
+      color: aliceblue;
+      padding: 2rem;
+      text-align: center;
+      border-right: 0.1rem solid #ffffff;
+    }
+    button{
+      margin: 0 auto;
+      display: flex;
+      padding: 1rem 2rem;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+  <p id="myParagraph">Lorem ipsum dolor sdfhl;dnsfc skfdj gh ergo nre;kgfn koewrb;kgjlbkgfle skglfldk;gbnsklknknf;lnsd dnflksd sit amet</p>
+  
+  <button id="play">play</button>
+
+<script>
+  const paragraph = document.getElementById("myParagraph");
+  const text = paragraph.textContent;
+  const play = document.getElementById('play');
+
+  let index = 0;
+
+  function revealText() {
+    if (index < text.length) {
+      paragraph.textContent = text.slice(0, index + 1);
+      index++;
+      setTimeout(revealText, 50);
+    }
+  }
+  revealText();
+play.addEventListener('click', () => { 
+  revealText();
+})
+
+// revealText();
+
+</script>
+</body>
+</html>

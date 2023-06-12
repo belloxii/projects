@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="images/logo.jpg">
+  <title>Bello R. A.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://kit.fontawesome.com/623d8b872c.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<div class="topper"></div>
+<div id="header">
+
+  <div class="container">
+
+    <nav id="myDiv">
+      <p id="logo"><span>R</span>idwan;</p>
+      <ul id="menu">
+        <li><a href="#header" class="active-nav">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#port">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fa-solid fa-xmark" onclick="fxclose()"></i>
+      </ul>
+      <i class="fa-solid fa-bars" onclick="fxopen()"></i>
+    </nav>
+</div>
+
+<div class="container">
+  <div class="big">
+    <div class="cont">
+      <div class="row">
+
+          <div class="col-1">
+          <div class="header-text">
+            <h6>Assalaamu 'alaykum.</h6>
+            <h1 id="rev">I am <span>Ridwan</span> from <span id="green">Ni</span>ge<span id="green">ria,</span></h1>
+            <h3>I develope <span id="dyn">Things</span>...</h3>
+            <p>Technology teams are only as successful as their skills are relevant. Give them access to Pluralsight Skills courses, assessments, learning paths, and labs and you give them the tech fluency they need to build business, critical skills.</p>
+            <a href="#contact" class="btn btn2" id="ps">Contact Me</a>
+            <a href="#port" class="btn btn2" id="ps">My Projects</a>  
+          </div>
+        </div>
+
+        <div class="col-2">
+          <img src="images/coding.gif" id="side">
+        </div> 
+        
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+<div id="about">
+  <div class="container">
+    <div class="row">
+
+      <div class="about-col-1">
+        <img src="images/user2.png" id="image" alt="img">
+      </div>
+
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I am Ridwan Abiola Bello, a computer science graduate and programming enthusiast with a deep passion for coding. Over the past five years, I've honed my skills in a variety of languages, including HTML, CSS, JavaScript, Python, PHP, and SQL. Whether I'm creating sleek and stylish designs with CSS or building complex database structures with SQL, I'm always excited to dive into new challenges and push myself to learn more. I believe that programming is more than just a job, it's a way to bring creative ideas to life and make a positive impact on the world.</p>
+
+        <div class="tab-title">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('edu')">Education</p>
+        </div>
+
+        <div class="tab-contents active-content" id="skills">
+          <ul>
+            <li><span>Web</span><br>Website develoment</li>
+            <li><span>App</span><br>Mobile App develoment</li>
+            <li><span>Python</span><br>Web Scraping and AI</li>
+            <li><span>SQL</span><br>SQL and Database Management</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2010</span><br>Website develoment</li>
+            <li><span>2015</span><br>Website develoment</li>
+            <li><span>2018</span><br>Website develoment</li>
+            <li><span>2021</span><br>Website develoment</li>
+          </ul>
+        </div>
+
+        <div class="tab-contents" id="edu">
+          <ul>
+            <li><span>Primary</span><br>Website develoment</li>
+            <li><span>Secondary</span><br>Website develoment</li>
+            <li><span>Tertiary</span><br>Website develoment</li>
+            <li><span>programming</span><br>Website develoment</li>
+          </ul>
+        </div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+
+    <div class="services-list">
+
+        <div>
+          <i class="fa-solid fa-code" style="color: #ffffff;"></i>
+          <h2>Web Design</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, veritatis ab. Consectetur commodi vero, iusto totam deserunt quidem minus possimus molestias perferendis, temporibus corrupti consequatur ad quis eveniet provident vel?</p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <i class="fa-brands fa-python" style="color: #ffffff;"></i>
+          <h2>Web Scraping</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, veritatis ab. Consectetur commodi vero, iusto totam deserunt quidem minus possimus molestias perferendis, temporibus corrupti consequatur ad quis eveniet provident vel?</p>
+          <a href="#">Learn more</a>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-laptop-code"></i>
+          <h2>App Development</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo, veritatis ab. Consectetur commodi vero, iusto totam deserunt quidem minus possimus molestias perferendis, temporibus corrupti consequatur ad quis eveniet provident vel?</p>
+          <a href="#">Learn more</a>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+<div id="port">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+
+    <div class="work-list">
+      <div class="work">
+        <img src="images/work-1.png" alt="">
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Lorem ipsum dolor adipisicing elit. Beatae, numa asperiores numquam eaque nostrum eveniet?</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+  
+      <div class="work">
+        <img src="images/work-2.png" alt="">
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Lorem ipsum dolor sit, elit. Beatae, numquam. Nobis alias tempora nostrum eveniet?</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+  
+      <div class="work">
+        <img src="images/work-3.png" alt="">
+        <div class="layer">
+          <h3>Social Media App</h3>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Beatae, numquam. Nobis eveniet?</p>
+          <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="btn">See More</a>
+
+  </div>
+</div>
+
+<a href="#header" id="scrollToTopBtn">&#8593;Top</a>
+
+<div id="contact">
+  <div class="container">
+
+    <div class="row">
+
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fa-solid fa-envelope"></i>ridwanbelloxi@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i>08101237991</p>
+        <div class="socials">
+          <a href=""><i class="fa-brands fa-facebook"></i></a>
+          <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          <a href=""><i class="fa-brands fa-github"></i></a>
+        </div>
+        <a href="Ridwan_CV.pdf" class="btn btn2">Download CV</a>
+      </div>
+
+      <div class="contact-right">
+        
+        <form action="" id="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your eMail" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+
+          <button type="submit" class="btn btn2">Submit</button>
+          <span id="msg"></span>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="copy">
+    <p>&copy; 2023 Bello Ridwan Abiola. Gotryt Technologies Limited. All Rights Reserved
+    </p>
+  </div>
+</div>
+
+<script>
+  const navItems = document.querySelectorAll('nav ul li a');
+
+navItems.forEach(item => {
+  item.addEventListener('click', () => {
+    // remove active class from all items
+    navItems.forEach(item => {
+      item.classList.remove('active-nav');
+    });
+    
+    // add active class to clicked item
+    item.classList.add('active-nav');
+  });
+});
+
+</script>
+
+<script>
+  var tablinks = document.getElementsByClassName('tab-links');
+  var tabcontents = document.getElementsByClassName('tab-contents');
+
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove('active-link');
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove('active-content');
+    }
+    event.currentTarget.classList.add('active-link');
+    document.getElementById(tabname).classList.add('active-content');
+  }
+</script>
+
+<script>
+  var menu = document.getElementById("menu");
+
+  function fxopen(){
+    menu.style.right = "-30px";
+  }
+  function fxclose(){
+    menu.style.right = "-180px";
+  }
+</script>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwbANdfJAWdSQHO0NKTf-gTYQOKch7xQFXOvuh7xLtG0vx9SkdXSLh7E7XvfawiGeU/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+<script>
+  window.onscroll = function() {myFunction()};
+
+var div = document.getElementById("myDiv");
+var offset = div.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > offset) {
+    div.classList.add("sticky");
+  } else {
+    div.classList.remove("sticky");
+  }
+}
+</script>
+
+<script>
+  
+  const sentences = [
+  "Desktop Apps", "Mobile Apps", "Web Apps", "Web Scraping Scripts","Front End and Back End"
+  ];
+  
+  let sentenceIndex = 0;
+  let charIndex = 0;
+  let intervalId;
+
+  function revealChars() {
+    const sentence = sentences[sentenceIndex];
+    const paragraph = document.getElementById('dyn');
+    paragraph.textContent = sentence.slice(0, charIndex);
+    charIndex++;
+    if (charIndex > sentence.length) {
+      clearInterval(intervalId);
+      charIndex = 0;
+      sentenceIndex = (sentenceIndex + 1) % sentences.length;
+      setTimeout(() => {
+        intervalId = setInterval(revealChars, 100);
+      }, 2000);
+    }
+  }
+
+  intervalId = setInterval(revealChars, 100);
+</script>
+
+</body>
+</html>

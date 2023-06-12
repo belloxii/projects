@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+        :root {
+            --Light-Cyan: hsl(193, 38%, 86%);
+            --Neon-Green: hsl(150, 100%, 66%);
+            --Grayish-Blue: hsl(217, 19%, 38%);
+            --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+            --Dark-Blue: hsl(218, 23%, 16%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5rem;
+            text-align: center;
+            background-color: var(--Dark-Blue);
+            font-family: 'Manrope', sans-serif;
+        }
+
+        main {
+            width: 20rem;
+            margin: 0 auto;
+            background-color: var(--Dark-Grayish-Blue);
+            position: relative;
+            padding: 3rem 1rem;
+            border-radius: 1rem;
+            display: block;
+            word-wrap: break-word;
+            min-height: 50vh;
+            text-align: center;
+            }
+
+        h1 {
+            color: var(--Neon-Green);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.75rem;
+            color: var(--Light-Cyan);
+            line-height: 1.5;
+            border-right: 0.1rem solid #000;
+        }
+
+        img.divider {
+            width: 100%;
+            margin: 1rem 0;
+        }
+
+        div.image {
+            padding: 1.5rem;
+            background-color: var(--Neon-Green);
+            border-radius: 4rem;
+            cursor: pointer;
+            position: absolute;
+            bottom: -2rem;
+            width: 4.5rem;
+            display: block;
+        }
+
+        div.image:hover {
+            box-shadow: 0 0 2.5rem var(--Neon-Green);
+        }
+
+
+        @media screen and (min-width: 700px) {
+            main{
+                width: 23rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+  <main>
+    <h1>Advice   #<span id="num"></span></h1>
+    <div class="container">
+      <p class="advice" id="advice">welcome</p>
+    </div>
+    
+    <img src="images/pattern-divider-desktop.svg" alt="" class="divider">
+    
+    <div class="image" id="dice">
+      <img src="images/icon-dice.svg" alt="dice icon"  class="dice">
+    </div>
+    
+  </main>
+
+<script>
+
+const num = document.getElementById("num");
+const advice = document.getElementById("advice");
+const dice = document.getElementById("dice");
+window.onload = displayAdvice();
+
+function displayAdvice() {
+    const apiUrl = "https://api.adviceslip.com/advice";
+    fetch(apiUrl)
+        .then(res => res.json())
+        .then(data => data.slip)
+        .then(data => {
+            num.innerText = data.id;
+            advicer = data.advice;
+
+            
+            const text = advicer;
+            let index = 0;
+
+            function revealText() {
+                if (index < text.length) {
+                advice.textContent = text.slice(0, index + 1);
+                index++;
+                setTimeout(revealText, 50);
+                }
+            }
+            revealText();
+        })
+    .catch((error) => {
+        alert(`Error ${error}`);
+    })
+}
+
+dice.addEventListener("click", () => {
+    displayAdvice();
+})
+
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .image-container {
+      perspective: 1000px;
+      display: inline-block;
+    }
+  
+    .image-container:hover .image {
+      transform: rotateY(calc((var(--mouse-x) - var(--container-x)) / var(--container-width) * 30deg))
+        rotateX(calc((var(--mouse-y) - var(--container-y)) / var(--container-height) * -30deg));
+    }
+  
+    .image {
+      transition: transform 0.5s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-container" style="--container-x: 0; --container-y: 0; --container-width: 300px; --container-height: 200px;">
+    <img class="image" src="../images/user2.png" alt="Your Image" />
+  </div>
+
+
+  <script>
+    const container = document.querySelector('.image-container');
+    container.addEventListener('mousemove', (event) => {
+      const rect = container.getBoundingClientRect();
+      container.style.setProperty('--mouse-x', event.clientX);
+      container.style.setProperty('--mouse-y', event.clientY);
+      container.style.setProperty('--container-x', rect.x);
+      container.style.setProperty('--container-y', rect.y);
+    });
+  </script>
+
+</body>
+</html>
